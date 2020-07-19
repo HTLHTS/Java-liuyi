@@ -64,23 +64,6 @@ public class Circulate {
     }
 }
 
-🌟for 与while的区别
-1）对于控制循环的变量，for循环结束后不能再访问（从内存中消失），而while循环结束后仍能访问。
-2）一些实例关于for和while的取舍
-/*一个范围用for循环非常明确；不明确要做多少次，while循环较为合适**/    
-//一张纸的初始厚度为0.01m,问要折多少次才能不低于珠穆朗玛峰的高度8848m?
-public class Circulate {
-    public static void main(String[] args) {
-       double x=0.01;
-       int count=0;
-       while(x<8848){
-           count++;
-           x*=2;
-       }
-        System.out.println(count);//20
-    }
-}
-
  三，do...while循环
  /*
  初始化语句
@@ -116,7 +99,26 @@ public class Circulate {
     }
 }
 
-          
-          
-          
-          
+🌟for 与while的区别
+1）对于控制循环的变量，for循环结束后不能再访问（从内存中消失），而while循环结束后仍能访问。
+2）优先考虑for，while，do...while
+一些实例关于for和while的取舍
+/*一个范围用for循环非常明确；不明确要做多少次，while循环较为合适**/    
+//一张纸的初始厚度为0.01m,问要折多少次才能不低于珠穆朗玛峰的高度8848m?
+public class Circulate {
+    public static void main(String[] args) {
+       double x=0.01;
+       int count=0;
+       while(x<8848){
+           count++;
+           x*=2;
+       }
+        System.out.println(count);//20
+    }
+}
+
+3）do...while至少执行一次循环体；而for或while先判断条件是否成立，才执行
+4）死循环：注意控制条件语句的那个变量
+最简单的死循环格式：while(true){}  和  for(;;){}
+
+ 
